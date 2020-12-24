@@ -13,6 +13,7 @@ const errorHandler = require('./lib/error_handler')
 const replaceToken = require('./lib/replace_token')
 const requestLogger = require('./lib/request_logger')
 
+const currentDb = require('./config/db')
 // require database configuration logic
 // `db` will be the actual Mongo URI as a string
 const db = require('./config/db')
@@ -33,7 +34,7 @@ const clientDevPort = 7165
 //   useCreateIndex: true,
 //   useUnifiedTopology: true
 // })
-const uri = process.env.MONGODB_URI
+const uri = currentDb
 mongoose.connect( uri, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, () => { console.log("we are connected")}).catch(err => console.log(err));
 // instantiate express application object
 const app = express()
