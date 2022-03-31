@@ -1,15 +1,7 @@
 const mongoose = require('mongoose')
 
-const placeSchema = new mongoose.Schema({
+const centerPlaceSchema = new mongoose.Schema({
   name: {
-    type: String,
-    required: true
-  },
-  longName: {
-    type: String,
-    required: false
-  },
-  type: {
     type: String,
     required: true
   },
@@ -18,10 +10,6 @@ const placeSchema = new mongoose.Schema({
     required: true
   },
   longitude: {
-    type: String,
-    required: true
-  },
-  emoji: {
     type: String,
     required: true
   },
@@ -34,4 +22,4 @@ const placeSchema = new mongoose.Schema({
   timestamps: true
 })
 
-module.exports = mongoose.model('Place', placeSchema)
+module.exports = mongoose.model('CenterPlace', centerPlaceSchema)

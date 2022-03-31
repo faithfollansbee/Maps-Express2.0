@@ -10,6 +10,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  mapSettings: {
+    type: Array,
+    required: true,
+  },
   token: String
 }, {
   timestamps: true,
