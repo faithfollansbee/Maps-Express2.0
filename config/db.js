@@ -19,5 +19,5 @@ const localDb = process.env.TESTENV ? database.test : database.development
 // heroku production evironment otherwise use test or development db
 const currentDb = process.env.MONGODB_URI || localDb
 
-
+console.log('The Current Database: ',  currentDb)
 module.exports = currentDb
