@@ -36,7 +36,7 @@ const clientDevPort = 7166
 //   useUnifiedTopology: true
 // })
 const uri = currentDb
-mongoose.connect( uri, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true }, () => { console.log("we are connected")}).catch(err => console.log(err));
+mongoose.connect( uri, { useNewUrlParser: true, useUnifiedTopology: true, useCreateIndex: true });
 // instantiate express application object
 const app = express()
 
